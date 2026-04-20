@@ -4,7 +4,7 @@ Projeto Final desenvolvido para a disciplina de **Programação Orientada a Obje
 
 ## 👥 Integrantes do Grupo (Grupo 5)
 * Lucas Lopes Cardoso
-* Nome do Participante 2
+* João Paulo Cordebello
 * Nome do Participante 3
 * Nome do Participante 4
 * Nome do Participante 5
