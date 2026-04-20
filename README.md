@@ -39,10 +39,32 @@ O banco de dados está estruturado para suportar o modelo lógico proposto:
 * **DML:** Inserção de pelo menos 10 registros por tabela para testes (exceto na tabela de Nota Fiscal).
 
 ## 🚀 Como Executar
+
+### Pré-requisitos
 1. Clone o repositório em sua máquina.
 2. Certifique-se de ter o Java JDK 17+ instalado.
 3. Importe o driver JDBC do PostgreSQL no seu projeto.
-4. Configure as credenciais do banco de dados (Neon) no arquivo de conexão.
+
+### Configuração das Variáveis de Ambiente
+
+As credenciais do banco de dados **não ficam no código-fonte**. Você precisa exportar as variáveis de ambiente antes de rodar o projeto.
+
+Copie o arquivo de exemplo e preencha com suas credenciais:
+```bash
+cp hospital/.env.example hospital/.env
+# Edite hospital/.env com seus valores reais
+```
+
+Em seguida, exporte as variáveis no terminal antes de executar:
+```bash
+export DB_URL=jdbc:postgresql://<host>:5432/<nome-do-banco>
+export DB_USER=<seu-usuario>
+export DB_PASSWORD=<sua-senha>
+```
+
+> ⚠️ O arquivo `hospital/.env` está listado no `.gitignore` e **nunca deve ser commitado**.
+
+### Execução
 5. Execute a classe principal para abrir a interface de faturamento.
 
 ---

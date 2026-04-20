@@ -1,0 +1,12 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "TesteConexao",
+            "request": "launch",
+            "mainClass": "br.com.hospital.model.TesteConexao",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
