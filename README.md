@@ -7,7 +7,7 @@ Projeto Final desenvolvido para a disciplina de **Programação Orientada a Obje
 * João Paulo Cordebello
 * Thiago Nicodemus de Souza
 * Pedro Henrique Oliveira Nogueira
-* Nome do Participante 5
+* Nikolas Ramos Guerra Peixe
 
 ## 🛠️ Tecnologias Utilizadas
 * **Linguagem:** Java
