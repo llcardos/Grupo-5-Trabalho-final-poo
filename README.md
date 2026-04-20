@@ -6,7 +6,7 @@ Projeto Final desenvolvido para a disciplina de **Programação Orientada a Obje
 * Lucas Lopes Cardoso
 * João Paulo Cordebello
 * Thiago Nicodemus de Souza
-* Nome do Participante 4
+* Pedro Henrique Oliveira Nogueira
 * Nome do Participante 5
 
 ## 🛠️ Tecnologias Utilizadas
