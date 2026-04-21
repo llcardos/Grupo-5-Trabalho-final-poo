@@ -54,28 +54,4 @@ public class Enfermeiras {
         this.coren = coren;
     }
 
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
