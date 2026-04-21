@@ -63,29 +63,5 @@ public class Laudos {
     public void setAnexo(String anexo) {
         this.anexo = anexo;
     }
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     
 }
