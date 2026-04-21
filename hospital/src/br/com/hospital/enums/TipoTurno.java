@@ -1,4 +1,4 @@
-package br.com.hospital.model;
+package br.com.hospital.enums;
 
 public enum TipoTurno {
     MANHA, TARDE, NOITE

@@ -1,4 +1,4 @@
-package br.com.hospital.model;
+package br.com.hospital.enums;
 
 public enum StatusAtendimento {
   REALIZADO, CANCELADO, AGENDADO;
