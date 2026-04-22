@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 
 public class Impostos {
 
-    private Integer id_imposto;
+    private Integer idImposto;
     private Integer id_nf;
 
     private BigDecimal pis;
@@ -16,9 +16,9 @@ public class Impostos {
     public Impostos() {
     }
 
-    public Impostos(Integer id_imposto, Integer id_nf, BigDecimal pis, BigDecimal cofins, BigDecimal iss,
+    public Impostos(Integer idImposto, Integer id_nf, BigDecimal pis, BigDecimal cofins, BigDecimal iss,
                     BigDecimal irpj, BigDecimal csll) {
-        this.id_imposto = id_imposto;
+        this.idImposto = idImposto;
         this.id_nf = id_nf;
         this.pis = pis;
         this.cofins = cofins;
@@ -29,16 +29,16 @@ public class Impostos {
 
     @Override
     public String toString() {
-        return "Impostos [id_imposto=" + id_imposto + ", id_nf=" + id_nf + ", pis=" + pis + ", cofins=" + cofins
+        return "Impostos [idImposto=" + idImposto + ", id_nf=" + id_nf + ", pis=" + pis + ", cofins=" + cofins
                 + ", iss=" + iss + ", irpj=" + irpj + ", csll=" + csll + "]";
     }
 
-    public Integer getId_imposto() {
-        return id_imposto;
+    public Integer getIdImposto() {
+        return idImposto;
     }
 
-    public void setId_imposto(Integer id_imposto) {
-        this.id_imposto = id_imposto;
+    public void setIdImposto(Integer idImposto) {
+        this.idImposto = idImposto;
     }
 
     public Integer getId_nf() {

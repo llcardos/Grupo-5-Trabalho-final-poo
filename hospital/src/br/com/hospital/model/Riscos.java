@@ -1,30 +1,32 @@
 package br.com.hospital.model;
 
+import br.com.hospital.enums.CorRisco;
+
 public class Riscos {
-    private int id_risco;
+    private int idRisco;
     private String nome;
-    private CorRisco cor_risco;
+    private CorRisco corRisco;
 
     public Riscos() {
     }
     
-    public Riscos(int id_risco, String nome, CorRisco cor_risco) {
-        this.id_risco = id_risco;
+    public Riscos(int idRisco, String nome, CorRisco corRisco) {
+        this.idRisco = idRisco;
         this.nome = nome;
-        this.cor_risco = cor_risco;
+        this.corRisco = corRisco;
     }
 
     @Override
     public String toString() {
-        return "Riscos [id_risco=" + id_risco + ", nome=" + nome + ", cor_risco=" + cor_risco + "]";
+        return "Riscos [idRisco=" + idRisco + ", nome=" + nome + ", corRisco=" + corRisco + "]";
     }
 
-    public int getId_risco() {
-        return id_risco;
+    public int getIdRisco() {
+        return idRisco;
     }
 
-    public void setId_risco(int id_risco) {
-        this.id_risco = id_risco;
+    public void setIdRisco(int idRisco) {
+        this.idRisco = idRisco;
     }
 
     public String getNome() {
@@ -35,11 +37,11 @@ public class Riscos {
         this.nome = nome;
     }
 
-    public CorRisco getCor_risco() {
-        return cor_risco;
+    public CorRisco getCorRisco() {
+        return corRisco;
     }
 
-    public void setCor_risco(CorRisco cor_risco) {
-        this.cor_risco = cor_risco;
+    public void setCorRisco(CorRisco corRisco) {
+        this.corRisco = corRisco;
     }
 }

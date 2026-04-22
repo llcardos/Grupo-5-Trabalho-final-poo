@@ -4,59 +4,59 @@ import java.time.LocalDateTime;
 
 public class Internacoes {
 
-    private Integer id_internacao;
-    private LocalDateTime data_inicio;
-    private LocalDateTime data_fim;
-    private Integer id_leito;
+    private Integer idInternacao;
+    private LocalDateTime dataInicio;
+    private LocalDateTime dataFim;
+    private Integer idLeito;
 
     public Internacoes() {
     }
 
-    public Internacoes(Integer id_internacao, LocalDateTime data_inicio, LocalDateTime data_fim, Integer id_leito) {
-        this.id_internacao = id_internacao;
-        this.data_inicio = data_inicio;
-        this.data_fim = data_fim;
-        this.id_leito = id_leito;
+    public Internacoes(Integer idInternacao, LocalDateTime dataInicio, LocalDateTime dataFim, Integer idLeito) {
+        this.idInternacao = idInternacao;
+        this.dataInicio = dataInicio;
+        this.dataFim = dataFim;
+        this.idLeito = idLeito;
     }
 
     @Override
     public String toString() {
-        return "Internacoes [id_internacao=" + id_internacao +
-            ", data_inicio=" + data_inicio +
-            ", data_fim=" + data_fim +
-            ", id_leito=" + id_leito + "]";
+        return "Internacoes [idInternacao=" + idInternacao +
+            ", dataInicio=" + dataInicio +
+            ", dataFim=" + dataFim +
+            ", idLeito=" + idLeito + "]";
     }
 
-    public Integer getId_internacao() {
-        return id_internacao;
+    public Integer getIdInternacao() {
+        return idInternacao;
     }
 
-    public void setId_internacao(Integer id_internacao) {
-        this.id_internacao = id_internacao;
+    public void setIdInternacao(Integer idInternacao) {
+        this.idInternacao = idInternacao;
     }
 
-    public LocalDateTime getData_inicio() {
-        return data_inicio;
+    public LocalDateTime getDataInicio() {
+        return dataInicio;
     }
 
-    public void setData_inicio(LocalDateTime data_inicio) {
-        this.data_inicio = data_inicio;
+    public void setDataInicio(LocalDateTime dataInicio) {
+        this.dataInicio = dataInicio;
     }
 
-    public LocalDateTime getData_fim() {
-        return data_fim;
+    public LocalDateTime getDataFim() {
+        return dataFim;
     }
 
-    public void setData_fim(LocalDateTime data_fim) {
-        this.data_fim = data_fim;
+    public void setDataFim(LocalDateTime dataFim) {
+        this.dataFim = dataFim;
     }
 
-    public Integer getId_leito() {
-        return id_leito;
+    public Integer getIdLeito() {
+        return idLeito;
     }
 
-    public void setId_leito(Integer id_leito) {
-        this.id_leito = id_leito;
+    public void setIdLeito(Integer idLeito) {
+        this.idLeito = idLeito;
     }
 
 }

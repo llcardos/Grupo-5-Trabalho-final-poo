@@ -1,31 +1,31 @@
 package br.com.hospital.model;
 
 public class Pacientes {
-    private int id_paciente;
+    private int idPaciente;
     private String nome;
     private String data_nascimento;
 
     public Pacientes() {
     }
 
-    public Pacientes(String data_nascimento, int id_paciente, String nome) {
+    public Pacientes(String data_nascimento, int idPaciente, String nome) {
         this.data_nascimento = data_nascimento;
-        this.id_paciente = id_paciente;
+        this.idPaciente = idPaciente;
         this.nome = nome;
     }
 
     @Override
     public String toString() {
-        return "Pacientes [id_paciente=" + id_paciente + ", nome=" + nome + ", data_nascimento=" + data_nascimento
+        return "Pacientes [idPaciente=" + idPaciente + ", nome=" + nome + ", data_nascimento=" + data_nascimento
                 + "]";
     }
 
-    public int getId_paciente() {
-        return id_paciente;
+    public int getIdPaciente() {
+        return idPaciente;
     }
 
-    public void setId_paciente(int id_paciente) {
-        this.id_paciente = id_paciente;
+    public void setIdPaciente(int idPaciente) {
+        this.idPaciente = idPaciente;
     }
 
     public String getNome() {

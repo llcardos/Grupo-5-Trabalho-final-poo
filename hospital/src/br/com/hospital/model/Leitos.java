@@ -1,13 +1,15 @@
 package br.com.hospital.model;
 
+import br.com.hospital.enums.StatusLeito;
+
 public class Leitos {
-    private int id_leito;
-    private StatusLeito status_leito;
+    private int idLeito;
+    private StatusLeito statusLeito;
     private String id_setor;
 
-    public Leitos(int id_leito, StatusLeito status_leito, String id_setor) {
-        this.id_leito = id_leito;
-        this.status_leito = status_leito;
+    public Leitos(int idLeito, StatusLeito statusLeito, String id_setor) {
+        this.idLeito = idLeito;
+        this.statusLeito = statusLeito;
         this.id_setor = id_setor;
     }
 
@@ -16,13 +18,13 @@ public class Leitos {
 
     @Override
     public String toString() {
-        return "Leitos [id_leito=" + id_leito + ", status_leito=" + status_leito + ", id_setor=" + id_setor + "]";
+        return "Leitos [idLeito=" + idLeito + ", statusLeito=" + statusLeito + ", id_setor=" + id_setor + "]";
     }
-    public int getId_leito() {
-        return id_leito;
+    public int getIdLeito() {
+        return idLeito;
     }
-    public void setId_leito(int id_leito) {
-        this.id_leito = id_leito;
+    public void setIdLeito(int idLeito) {
+        this.idLeito = idLeito;
     }
     public String getId_setor() {
         return id_setor;

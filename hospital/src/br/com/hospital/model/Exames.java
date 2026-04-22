@@ -1,7 +1,7 @@
 package br.com.hospital.model;
 
 public class Exames {
-    private Integer id_exame;
+    private Integer idExame;
     private String nome;
     private String tipo;
     private double custo;
@@ -11,8 +11,8 @@ public class Exames {
     public Exames() {
     }
 
-    public Exames(Integer id_exame, String nome, String tipo, double custo, String laboratorio, String descricao) {
-        this.id_exame = id_exame;
+    public Exames(Integer idExame, String nome, String tipo, double custo, String laboratorio, String descricao) {
+        this.idExame = idExame;
         this.nome = nome;
         this.tipo = tipo;
         this.custo = custo;
@@ -22,16 +22,16 @@ public class Exames {
 
     @Override
     public String toString() {
-        return "Exames [id_exame=" + id_exame + ", nome=" + nome + ", tipo=" + tipo + ", custo=" + custo + ", laboratorio="
+        return "Exames [idExame=" + idExame + ", nome=" + nome + ", tipo=" + tipo + ", custo=" + custo + ", laboratorio="
                 + laboratorio + ", descricao=" + descricao + "]";
     }
 
     public Integer getId() {
-        return id_exame;
+        return idExame;
     }
 
-    public void setId(Integer id_exame) {
-        this.id_exame = id_exame;
+    public void setId(Integer idExame) {
+        this.idExame = idExame;
     }
 
     public String getNome() {

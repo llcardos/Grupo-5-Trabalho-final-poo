@@ -3,7 +3,7 @@ package br.com.hospital.model;
 import java.time.LocalDate;
 
 public class Atendimento {
-    private Integer id_atendimento;
+    private Integer idAtendimento;
     private String nome;
     private String tipo;
     private String status;    
@@ -13,10 +13,10 @@ public class Atendimento {
     private Integer id_Medico;
     private Integer id_Enfermeira;
 
-    public Atendimento(Integer id_atendimento, String nome, String tipo, String status, String observacao, 
+    public Atendimento(Integer idAtendimento, String nome, String tipo, String status, String observacao, 
         LocalDate data, Integer id_Paciente, Integer id_Medico, Integer id_Enfermeira) {
        
-        this.id_atendimento = id_atendimento;
+        this.idAtendimento = idAtendimento;
         this.nome = nome;
         this.tipo = tipo;
         this.status = status;
@@ -29,11 +29,11 @@ public class Atendimento {
 
     @Override
     public String toString() {
-        return "Atendimento [id_atendimento=" + id_atendimento + ", nome=" + nome + ", data=" + data + ", status=" + status + "]";
+        return "Atendimento [idAtendimento=" + idAtendimento + ", nome=" + nome + ", data=" + data + ", status=" + status + "]";
     }
 
-    public Integer getId() { return id_atendimento; }
-    public void setId(Integer id_atendimento) { this.id_atendimento = id_atendimento; }
+    public Integer getId() { return idAtendimento; }
+    public void setId(Integer idAtendimento) { this.idAtendimento = idAtendimento; }
 
     public String getNome() { return nome; }
     public void setNome(String nome) { this.nome = nome; }

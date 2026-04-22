@@ -2,7 +2,7 @@ package br.com.hospital.model;
 
 public class Hospital {
 
-    private Integer id_hospital;
+    private Integer idHospital;
     private String cnpj;
     private Integer id_setor;
     private Integer id_credenciamento;
@@ -10,8 +10,8 @@ public class Hospital {
     public Hospital() {
     }
 
-    public Hospital(Integer id_hospital, String cnpj, Integer id_setor, Integer id_credenciamento) {
-        this.id_hospital = id_hospital;
+    public Hospital(Integer idHospital, String cnpj, Integer id_setor, Integer id_credenciamento) {
+        this.idHospital = idHospital;
         this.cnpj = cnpj;
         this.id_setor = id_setor;
         this.id_credenciamento = id_credenciamento;
@@ -19,16 +19,16 @@ public class Hospital {
 
     @Override
     public String toString() {
-        return "Hospital [id_hospital=" + id_hospital + ", cnpj=" + cnpj + ", id_setor=" + id_setor + ", id_credenciamento="
+        return "Hospital [idHospital=" + idHospital + ", cnpj=" + cnpj + ", id_setor=" + id_setor + ", id_credenciamento="
                 + id_credenciamento + "]";
     }
 
-    public Integer getId_hospital() {
-        return id_hospital;
+    public Integer getIdHospital() {
+        return idHospital;
     }
 
-    public void setId_hospital(Integer id_hospital) {
-        this.id_hospital = id_hospital;
+    public void setIdHospital(Integer idHospital) {
+        this.idHospital = idHospital;
     }
 
     public String getCnpj() {

@@ -1,13 +1,15 @@
 package br.com.hospital.model;
 
+import br.com.hospital.enums.CoberturaPlano;
+
 public class Credenciamentos {
-    private Integer id_credenciamento;
+    private Integer idCredenciamento;
     private String nome;
     private String telefone;
     private CoberturaPlano cobertura;
 
-    public Credenciamentos (Integer id_credenciamento, String nome, String telefone, CoberturaPlano cobertura) {
-        this.id_credenciamento = id_credenciamento;
+    public Credenciamentos (Integer idCredenciamento, String nome, String telefone, CoberturaPlano cobertura) {
+        this.idCredenciamento = idCredenciamento;
         this.nome = nome;
         this.telefone = telefone;
         this.cobertura = cobertura;
@@ -15,11 +17,11 @@ public class Credenciamentos {
 
     @Override
     public String toString() {
-        return "Credenciamento [id_credenciamento=" + id_credenciamento + ", nome=" + nome + ", cobertura=" + cobertura + "]";
+        return "Credenciamento [idCredenciamento=" + idCredenciamento + ", nome=" + nome + ", cobertura=" + cobertura + "]";
     }
 
-    public Integer getId() {return id_credenciamento;}
-    public void setId(Integer id_credenciamento) {this.id_credenciamento = id_credenciamento;}
+    public Integer getId() {return idCredenciamento;}
+    public void setId(Integer idCredenciamento) {this.idCredenciamento = idCredenciamento;}
 
     public String getNome() {return nome;}
     public void setNome(String nome) {this.nome = nome;}

@@ -1,13 +1,13 @@
 package br.com.hospital.model;
 
 public class Medico {
-    private int id_medico;
+    private int idMedico;
     private String nome;
     private String especialidade;
     private String crm;
 
-    public Medico(int id_medico, String nome, String especialidade, String crm) {
-        this.id_medico = id_medico;
+    public Medico(int idMedico, String nome, String especialidade, String crm) {
+        this.idMedico = idMedico;
         this.nome = nome;
         this.especialidade = especialidade;
         this.crm = crm;
@@ -17,15 +17,15 @@ public class Medico {
 
     @Override
     public String toString() {
-        return "Medico [id_medico=" + id_medico + ", nome=" + nome + ", especialidade=" + especialidade + ", crm="
+        return "Medico [idMedico=" + idMedico + ", nome=" + nome + ", especialidade=" + especialidade + ", crm="
                 + crm + "]";
     }
     
-    public int getId_medico() {
-        return id_medico;
+    public int getIdMedico() {
+        return idMedico;
     }
-    public void setId_medico(int id_medico) {
-        this.id_medico = id_medico;
+    public void setIdMedico(int idMedico) {
+        this.idMedico = idMedico;
     }
     public String getNome() {
         return nome;

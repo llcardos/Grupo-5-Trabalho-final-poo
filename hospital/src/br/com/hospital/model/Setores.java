@@ -1,33 +1,35 @@
 package br.com.hospital.model;
 
+import br.com.hospital.enums.TipoSetor;
+
 public class Setores {
-    private int id_setor;
+    private int idSetor;
     private String nome;
-    private String enfermeiro_chefe;
-    private TipoSetor tipo_setor;
+    private String enfermeiroChefe;
+    private TipoSetor tipoSetor;
 
     public Setores() {
     }
 
-    public Setores(int id_setor, String nome, String enfermeiro_chefe, TipoSetor tipo_setor) {
-        this.id_setor = id_setor;
+    public Setores(int idSetor, String nome, String enfermeiroChefe, TipoSetor tipoSetor) {
+        this.idSetor = idSetor;
         this.nome = nome;
-        this.enfermeiro_chefe = enfermeiro_chefe;
-        this.tipo_setor = tipo_setor;
+        this.enfermeiroChefe = enfermeiroChefe;
+        this.tipoSetor = tipoSetor;
     }
 
     @Override
     public String toString() {
-        return "Setores [id_setor=" + id_setor + ", nome=" + nome + ", enfermeiro_chefe=" + enfermeiro_chefe
-                + ", tipo_setor=" + tipo_setor + "]";
+        return "Setores [idSetor=" + idSetor + ", nome=" + nome + ", enfermeiroChefe=" + enfermeiroChefe
+                + ", tipoSetor=" + tipoSetor + "]";
     }
 
-    public int getId_setor() {
-        return id_setor;
+    public int getIdSetor() {
+        return idSetor;
     }
 
-    public void setId_setor(int id_setor) {
-        this.id_setor = id_setor;
+    public void setIdSetor(int idSetor) {
+        this.idSetor = idSetor;
     }
 
     public String getNome() {
@@ -38,19 +40,19 @@ public class Setores {
         this.nome = nome;
     }
 
-    public String getEnfermeiro_chefe() {
-        return enfermeiro_chefe;
+    public String getEnfermeiroChefe() {
+        return enfermeiroChefe;
     }
 
-    public void setEnfermeiro_chefe(String enfermeiro_chefe) {
-        this.enfermeiro_chefe = enfermeiro_chefe;
+    public void setEnfermeiroChefe(String enfermeiroChefe) {
+        this.enfermeiroChefe = enfermeiroChefe;
     }
 
-    public TipoSetor getTipo_setor() {
-        return tipo_setor;
+    public TipoSetor getTipoSetor() {
+        return tipoSetor;
     }
 
-    public void setTipo_setor(TipoSetor tipo_setor) {
-        this.tipo_setor = tipo_setor;
+    public void setTipoSetor(TipoSetor tipoSetor) {
+        this.tipoSetor = tipoSetor;
     }
 }

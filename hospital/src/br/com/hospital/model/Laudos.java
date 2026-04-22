@@ -1,7 +1,7 @@
 package br.com.hospital.model;
 
 public class Laudos {
-    private Integer id_laudo;
+    private Integer idLaudo;
     private String nome;
     private String descricao;
     private String resultado;
@@ -10,8 +10,8 @@ public class Laudos {
     public Laudos() {
     }
 
-    public Laudos(Integer id_laudo, String nome, String descricao, String resultado, String anexo) {
-        this.id_laudo = id_laudo;
+    public Laudos(Integer idLaudo, String nome, String descricao, String resultado, String anexo) {
+        this.idLaudo = idLaudo;
         this.nome = nome;
         this.descricao = descricao;
         this.resultado = resultado;
@@ -20,16 +20,16 @@ public class Laudos {
 
     @Override
     public String toString() {
-        return "Laudos [id_laudo=" + id_laudo + ", nome=" + nome + ", descricao=" + descricao + ", resultado=" + resultado
+        return "Laudos [idLaudo=" + idLaudo + ", nome=" + nome + ", descricao=" + descricao + ", resultado=" + resultado
                 + ", anexo=" + anexo + "]";
     }
 
     public Integer getId() {
-        return id_laudo;
+        return idLaudo;
     }
 
-    public void setId(Integer id_laudo) {
-        this.id_laudo = id_laudo;
+    public void setId(Integer idLaudo) {
+        this.idLaudo = idLaudo;
     }
 
     public String getNome() {

@@ -1,13 +1,13 @@
 package br.com.hospital.model;
 
 public class Medicamentos {
-    private int id_medicamento;
+    private int idMedicamento;
     private String nome;
     private String dosagem;
     private int quantidade;
 
-    public Medicamentos(int id_medicamento, String nome, String dosagem, int quantidade) {
-        this.id_medicamento = id_medicamento;
+    public Medicamentos(int idMedicamento, String nome, String dosagem, int quantidade) {
+        this.idMedicamento = idMedicamento;
         this.nome = nome;
         this.dosagem = dosagem;
         this.quantidade = quantidade;
@@ -18,16 +18,16 @@ public class Medicamentos {
 
     @Override
     public String toString() {
-        return "Medicamentos [id_medicamento=" + id_medicamento + ", nome=" + nome + ", dosagem=" + dosagem
+        return "Medicamentos [idMedicamento=" + idMedicamento + ", nome=" + nome + ", dosagem=" + dosagem
                 + ", quantidade=" + quantidade + "]";
     }
 
-    public int getId_medicamento() {
-        return id_medicamento;
+    public int getIdMedicamento() {
+        return idMedicamento;
     }
 
-    public void setId_medicamento(int id_medicamento) {
-        this.id_medicamento = id_medicamento;
+    public void setIdMedicamento(int idMedicamento) {
+        this.idMedicamento = idMedicamento;
     }
 
     public String getNome() {
