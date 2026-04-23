@@ -1,20 +1,21 @@
 package br.com.hospital.model;
 
-public class Hospital {
+import java.util.List;
 
+public class Hospital {
     private Integer idHospital;
     private String cnpj;
-    private Integer id_setor;
-    private Integer id_credenciamento;
+    private List<Credenciamentos> credenciamentos;
+    private List<Setores> setores;
 
     public Hospital() {
     }
 
-    public Hospital(Integer idHospital, String cnpj, Integer id_setor, Integer id_credenciamento) {
+    public Hospital(Integer idHospital, String cnpj, List<Credenciamentos> credenciamentos, List<Setores> setores) {
         this.idHospital = idHospital;
         this.cnpj = cnpj;
-        this.id_setor = id_setor;
-        this.id_credenciamento = id_credenciamento;
+        this.credenciamentos = credenciamentos;
+        this.setores = setores;
     }
 
     @Override
