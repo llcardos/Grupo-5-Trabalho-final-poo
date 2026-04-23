@@ -1,12 +1,12 @@
 package br.com.hospital.model;
 
 public class Medico {
-    private int idMedico;
+    private Integer idMedico;
     private String nome;
     private String especialidade;
     private String crm;
 
-    public Medico(int idMedico, String nome, String especialidade, String crm) {
+    public Medico(Integer idMedico, String nome, String especialidade, String crm) {
         this.idMedico = idMedico;
         this.nome = nome;
         this.especialidade = especialidade;
@@ -21,10 +21,10 @@ public class Medico {
                 + crm + "]";
     }
     
-    public int getIdMedico() {
+    public Integer getIdMedico() {
         return idMedico;
     }
-    public void setIdMedico(int idMedico) {
+    public void setIdMedico(Integer idMedico) {
         this.idMedico = idMedico;
     }
     public String getNome() {
