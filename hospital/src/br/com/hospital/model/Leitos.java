@@ -4,11 +4,11 @@ import br.com.hospital.enums.StatusLeito;
 
 public class Leitos {
     private Integer idLeito;
-    private Integer identifier;
+    private String identifier;
     private StatusLeito statusLeito;
     private String idSetor;
 
-    public Leitos(Integer idLeito, Integer identifier, StatusLeito statusLeito, String idSetor) {
+    public Leitos(Integer idLeito, String identifier, StatusLeito statusLeito, String idSetor) {
         this.idLeito = idLeito;
         this.identifier = identifier;
         this.statusLeito = statusLeito;
@@ -32,11 +32,11 @@ public class Leitos {
         this.idLeito = idLeito;
     }
 
-    public Integer getIdentifier() {
+    public String getIdentifier() {
         return identifier;
     }
 
-    public void setIdentifier(Integer identifier) {
+    public void setIdentifier(String identifier) {
         this.identifier = identifier;
     }
 
