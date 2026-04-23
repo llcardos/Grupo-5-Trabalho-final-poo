@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "br.com.hospital.main.Main",
+            "projectName": "hospital_7d947ab0"
+        },
+        {
+            "type": "java",
             "name": "TesteConexao",
             "request": "launch",
             "mainClass": "br.com.hospital.model.TesteConexao",
