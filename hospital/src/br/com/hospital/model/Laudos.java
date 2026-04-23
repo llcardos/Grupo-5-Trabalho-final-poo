@@ -6,29 +6,31 @@ public class Laudos {
     private String descricao;
     private String resultado;
     private String anexo;
+    private Integer idExame;
     
     public Laudos() {
     }
 
-    public Laudos(Integer idLaudo, String nome, String descricao, String resultado, String anexo) {
+    public Laudos(Integer idLaudo, String nome, String descricao, String resultado, String anexo, Integer idExame) {
         this.idLaudo = idLaudo;
         this.nome = nome;
         this.descricao = descricao;
         this.resultado = resultado;
         this.anexo = anexo;
+        this.idExame = idExame;
     }
 
     @Override
     public String toString() {
         return "Laudos [idLaudo=" + idLaudo + ", nome=" + nome + ", descricao=" + descricao + ", resultado=" + resultado
-                + ", anexo=" + anexo + "]";
+                + ", anexo=" + anexo + ", idExame=" + idExame + "]";
     }
 
-    public Integer getId() {
+    public Integer getIdLaudo() {
         return idLaudo;
     }
 
-    public void setId(Integer idLaudo) {
+    public void setIdLaudo(Integer idLaudo) {
         this.idLaudo = idLaudo;
     }
 
@@ -63,5 +65,12 @@ public class Laudos {
     public void setAnexo(String anexo) {
         this.anexo = anexo;
     }
-    
+
+    public Integer getIdExame() {
+        return idExame;
+    }
+
+    public void setIdExame(Integer idExame) {
+        this.idExame = idExame;
+    }
 }

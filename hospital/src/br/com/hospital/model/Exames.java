@@ -7,30 +7,36 @@ public class Exames {
     private double custo;
     private String laboratorio;
     private String descricao;
+    private Integer idMedico;
+    private Integer idPaciente;
     
     public Exames() {
     }
 
-    public Exames(Integer idExame, String nome, String tipo, double custo, String laboratorio, String descricao) {
+    public Exames(Integer idExame, String nome, String tipo, double custo, String laboratorio, String descricao,
+            Integer idMedico, Integer idPaciente) {
         this.idExame = idExame;
         this.nome = nome;
         this.tipo = tipo;
         this.custo = custo;
         this.laboratorio = laboratorio;
         this.descricao = descricao;
+        this.idMedico = idMedico;
+        this.idPaciente = idPaciente;
     }
 
     @Override
     public String toString() {
-        return "Exames [idExame=" + idExame + ", nome=" + nome + ", tipo=" + tipo + ", custo=" + custo + ", laboratorio="
-                + laboratorio + ", descricao=" + descricao + "]";
+        return "Exames [idExame=" + idExame + ", nome=" + nome + ", tipo=" + tipo + ", custo=" + custo
+                + ", laboratorio=" + laboratorio + ", descricao=" + descricao + ", idMedico=" + idMedico
+                + ", idPaciente=" + idPaciente + "]";
     }
 
-    public Integer getId() {
+    public Integer getIdExame() {
         return idExame;
     }
 
-    public void setId(Integer idExame) {
+    public void setIdExame(Integer idExame) {
         this.idExame = idExame;
     }
 
@@ -72,5 +78,21 @@ public class Exames {
 
     public void setDescricao(String descricao) {
         this.descricao = descricao;
+    }
+
+    public Integer getIdMedico() {
+        return idMedico;
+    }
+
+    public void setIdMedico(Integer idMedico) {
+        this.idMedico = idMedico;
+    }
+
+    public Integer getIdPaciente() {
+        return idPaciente;
+    }
+
+    public void setIdPaciente(Integer idPaciente) {
+        this.idPaciente = idPaciente;
     }
 }

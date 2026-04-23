@@ -5,28 +5,30 @@ public class Enfermeiras {
     private String nome;
     private String turno;
     private String coren;
-
+    private Integer idSetor;
     
     public Enfermeiras() {
     }
 
-    public Enfermeiras(Integer idEnfermeira, String nome, String turno, String coren) {
+    public Enfermeiras(Integer idEnfermeira, String nome, String turno, String coren, Integer idSetor) {
         this.idEnfermeira = idEnfermeira;
         this.nome = nome;
         this.turno = turno;
         this.coren = coren;
+        this.idSetor = idSetor;
     }
 
     @Override
     public String toString() {
-        return "Enfermeiras [idEnfermeira=" + idEnfermeira + ", nome=" + nome + ", turno=" + turno + ", coren=" + coren + "]";
+        return "Enfermeiras [idEnfermeira=" + idEnfermeira + ", nome=" + nome + ", turno=" + turno + ", coren=" + coren
+                + ", idSetor=" + idSetor + "]";
     }
 
-    public Integer getId() {
+    public Integer getIdEnfermeira() {
         return idEnfermeira;
     }
 
-    public void setId(Integer idEnfermeira) {
+    public void setIdEnfermeira(Integer idEnfermeira) {
         this.idEnfermeira = idEnfermeira;
     }
 
@@ -54,4 +56,11 @@ public class Enfermeiras {
         this.coren = coren;
     }
 
+    public Integer getIdSetor() {
+        return idSetor;
+    }
+
+    public void setIdSetor(Integer idSetor) {
+        this.idSetor = idSetor;
+    }
 }
