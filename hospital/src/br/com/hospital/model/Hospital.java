@@ -3,24 +3,23 @@ package br.com.hospital.model;
 public class Hospital {
 
     private Integer idHospital;
+    private String nome;
     private String cnpj;
-    private Integer id_setor;
-    private Integer id_credenciamento;
 
     public Hospital() {
     }
 
-    public Hospital(Integer idHospital, String cnpj, Integer id_setor, Integer id_credenciamento) {
+    public Hospital(Integer idHospital, String nome, String cnpj) {
         this.idHospital = idHospital;
+        this.nome = nome;
         this.cnpj = cnpj;
-        this.id_setor = id_setor;
-        this.id_credenciamento = id_credenciamento;
     }
 
     @Override
     public String toString() {
-        return "Hospital [idHospital=" + idHospital + ", cnpj=" + cnpj + ", id_setor=" + id_setor + ", id_credenciamento="
-                + id_credenciamento + "]";
+        return "Hospital [idHospital=" + idHospital +
+                ", nome=" + nome +
+                ", cnpj=" + cnpj + "]";
     }
 
     public Integer getIdHospital() {
@@ -31,6 +30,14 @@ public class Hospital {
         this.idHospital = idHospital;
     }
 
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
     public String getCnpj() {
         return cnpj;
     }
@@ -38,21 +45,4 @@ public class Hospital {
     public void setCnpj(String cnpj) {
         this.cnpj = cnpj;
     }
-
-    public Integer getId_setor() {
-        return id_setor;
-    }
-
-    public void setId_setor(Integer id_setor) {
-        this.id_setor = id_setor;
-    }
-
-    public Integer getId_credenciamento() {
-        return id_credenciamento;
-    }
-
-    public void setId_credenciamento(Integer id_credenciamento) {
-        this.id_credenciamento = id_credenciamento;
-    }
-
 }

@@ -5,7 +5,6 @@ import java.math.BigDecimal;
 public class Impostos {
 
     private Integer idImposto;
-    private Integer id_nf;
 
     private BigDecimal pis;
     private BigDecimal cofins;
@@ -16,10 +15,9 @@ public class Impostos {
     public Impostos() {
     }
 
-    public Impostos(Integer idImposto, Integer id_nf, BigDecimal pis, BigDecimal cofins, BigDecimal iss,
-                    BigDecimal irpj, BigDecimal csll) {
+    public Impostos(Integer idImposto, BigDecimal pis, BigDecimal cofins,
+                    BigDecimal iss, BigDecimal irpj, BigDecimal csll) {
         this.idImposto = idImposto;
-        this.id_nf = id_nf;
         this.pis = pis;
         this.cofins = cofins;
         this.iss = iss;
@@ -29,8 +27,12 @@ public class Impostos {
 
     @Override
     public String toString() {
-        return "Impostos [idImposto=" + idImposto + ", id_nf=" + id_nf + ", pis=" + pis + ", cofins=" + cofins
-                + ", iss=" + iss + ", irpj=" + irpj + ", csll=" + csll + "]";
+        return "Impostos [idImposto=" + idImposto +
+                ", pis=" + pis +
+                ", cofins=" + cofins +
+                ", iss=" + iss +
+                ", irpj=" + irpj +
+                ", csll=" + csll + "]";
     }
 
     public Integer getIdImposto() {
@@ -39,14 +41,6 @@ public class Impostos {
 
     public void setIdImposto(Integer idImposto) {
         this.idImposto = idImposto;
-    }
-
-    public Integer getId_nf() {
-        return id_nf;
-    }
-
-    public void setId_nf(Integer id_nf) {
-        this.id_nf = id_nf;
     }
 
     public BigDecimal getPis() {
@@ -88,5 +82,4 @@ public class Impostos {
     public void setCsll(BigDecimal csll) {
         this.csll = csll;
     }
-
 }
