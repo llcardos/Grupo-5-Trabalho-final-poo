@@ -1,7 +1,8 @@
 package br.com.hospital.model;
 
-public class Hospital {
+import java.util.List;
 
+public class Hospital {
     private Integer idHospital;
     private String nome;
     private String cnpj;
