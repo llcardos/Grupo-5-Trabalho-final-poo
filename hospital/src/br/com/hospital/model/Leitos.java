@@ -3,14 +3,16 @@ package br.com.hospital.model;
 import br.com.hospital.enums.StatusLeito;
 
 public class Leitos {
-    private int idLeito;
+    private Integer idLeito;
+    private Integer identifier;
     private StatusLeito statusLeito;
-    private String id_setor;
+    private String idSetor;
 
-    public Leitos(int idLeito, StatusLeito statusLeito, String id_setor) {
+    public Leitos(Integer idLeito, Integer identifier, StatusLeito statusLeito, String idSetor) {
         this.idLeito = idLeito;
+        this.identifier = identifier;
         this.statusLeito = statusLeito;
-        this.id_setor = id_setor;
+        this.idSetor = idSetor;
     }
 
     public Leitos() {
@@ -18,18 +20,39 @@ public class Leitos {
 
     @Override
     public String toString() {
-        return "Leitos [idLeito=" + idLeito + ", statusLeito=" + statusLeito + ", id_setor=" + id_setor + "]";
+        return "Leitos [idLeito=" + idLeito + ", identifier=" + identifier + ", statusLeito=" + statusLeito
+                + ", idSetor=" + idSetor + "]";
     }
-    public int getIdLeito() {
+
+    public Integer getIdLeito() {
         return idLeito;
     }
-    public void setIdLeito(int idLeito) {
+
+    public void setIdLeito(Integer idLeito) {
         this.idLeito = idLeito;
     }
-    public String getId_setor() {
-        return id_setor;
+
+    public Integer getIdentifier() {
+        return identifier;
     }
-    public void setId_setor(String id_setor) {
-        this.id_setor = id_setor;
-    }    
+
+    public void setIdentifier(Integer identifier) {
+        this.identifier = identifier;
+    }
+
+    public StatusLeito getStatusLeito() {
+        return statusLeito;
+    }
+
+    public void setStatusLeito(StatusLeito statusLeito) {
+        this.statusLeito = statusLeito;
+    }
+
+    public String getIdSetor() {
+        return idSetor;
+    }
+
+    public void setIdSetor(String idSetor) {
+        this.idSetor = idSetor;
+    }
 }
