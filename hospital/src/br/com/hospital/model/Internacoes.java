@@ -12,7 +12,8 @@ public class Internacoes {
     public Internacoes() {
     }
 
-    public Internacoes(Integer idInternacao, LocalDateTime dataInicio, LocalDateTime dataFim, Integer idLeito) {
+    public Internacoes(Integer idInternacao, LocalDateTime dataInicio,
+        LocalDateTime dataFim, Integer idLeito) {
         this.idInternacao = idInternacao;
         this.dataInicio = dataInicio;
         this.dataFim = dataFim;
@@ -22,9 +23,9 @@ public class Internacoes {
     @Override
     public String toString() {
         return "Internacoes [idInternacao=" + idInternacao +
-            ", dataInicio=" + dataInicio +
-            ", dataFim=" + dataFim +
-            ", idLeito=" + idLeito + "]";
+                ", dataInicio=" + dataInicio +
+                ", dataFim=" + dataFim +
+                ", idLeito=" + idLeito + "]";
     }
 
     public Integer getIdInternacao() {
@@ -58,5 +59,4 @@ public class Internacoes {
     public void setIdLeito(Integer idLeito) {
         this.idLeito = idLeito;
     }
-
 }
