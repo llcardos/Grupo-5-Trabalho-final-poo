@@ -4,6 +4,7 @@ import br.com.hospital.model.TotalFaturamento;
 import br.com.hospital.persistence.FaturaDao;
 import br.com.hospital.utils.AliquotasImpostos;
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 public class FaturaService {
     
@@ -37,54 +38,54 @@ public class FaturaService {
         AliquotasImpostos al = new AliquotasImpostos();
 
         double valorBruto = calculaValorBruto(id);
-        BigDecimal valorBrutoBD = new BigDecimal(valorBruto);
+        BigDecimal valorBrutoBD = BigDecimal.valueOf(valorBruto);
 
         BigDecimal totalIss = valorBrutoBD.multiply(al.getISS());
 
-        return totalIss;
+        return totalIss.setScale(2, RoundingMode.HALF_UP);
     }
 
     public BigDecimal calculoImpostoPis(Integer id){
         AliquotasImpostos al = new AliquotasImpostos();
 
         double valorBruto = calculaValorBruto(id);
-        BigDecimal valorBrutoBD = new BigDecimal(valorBruto);
+        BigDecimal valorBrutoBD = BigDecimal.valueOf(valorBruto);
 
         BigDecimal totalPis = valorBrutoBD.multiply(al.getPIS());
 
-        return totalPis;
+        return totalPis.setScale(2,RoundingMode.HALF_UP);
     }
 
     public BigDecimal calculoImpostoCofins(Integer id){
         AliquotasImpostos al = new AliquotasImpostos();
 
         double valorBruto = calculaValorBruto(id);
-        BigDecimal valorBrutoBD = new BigDecimal(valorBruto);
+        BigDecimal valorBrutoBD = BigDecimal.valueOf(valorBruto);
 
         BigDecimal totalCofins = valorBrutoBD.multiply(al.getCOFINS());
 
-        return totalCofins;
+        return totalCofins.setScale(2,RoundingMode.HALF_UP);
     }
 
     public BigDecimal calculoImpostoIrpj(Integer id){
         AliquotasImpostos al = new AliquotasImpostos();
 
         double valorBruto = calculaValorBruto(id);
-        BigDecimal valorBrutoBD = new BigDecimal(valorBruto);
+        BigDecimal valorBrutoBD = BigDecimal.valueOf(valorBruto);
 
         BigDecimal totalIrpj = valorBrutoBD.multiply(al.getIRPJ());
 
-        return totalIrpj;
+        return totalIrpj.setScale(2, RoundingMode.HALF_UP);
     }
 
     public BigDecimal calculoImpostoCsll(Integer id){
         AliquotasImpostos al = new AliquotasImpostos();
 
         double valorBruto = calculaValorBruto(id);
-        BigDecimal valorBrutoBD = new BigDecimal(valorBruto);
+        BigDecimal valorBrutoBD = BigDecimal.valueOf(valorBruto);
 
         BigDecimal totalCsll = valorBrutoBD.multiply(al.getCSLL());
 
-        return totalCsll;
+        return totalCsll.setScale(2,RoundingMode.HALF_UP);
     }
 }
