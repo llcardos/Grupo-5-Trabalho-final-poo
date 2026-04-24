@@ -11,13 +11,22 @@ public class Pacientes {
     public Pacientes() {
     }
 
-    public Pacientes(String data_nascimento, Integer idCredenciamento, Integer idMedico, Integer idPaciente, Integer idRisco, String nome) {
+    public Pacientes(String nome, String data_nascimento, Integer idCredenciamento, Integer idRisco, Integer idMedico) {
+        this.nome = nome;
         this.data_nascimento = data_nascimento;
         this.idCredenciamento = idCredenciamento;
-        this.idMedico = idMedico;
-        this.idPaciente = idPaciente;
         this.idRisco = idRisco;
+        this.idMedico = idMedico;
+    }
+
+    public Pacientes(Integer idPaciente, String nome, String data_nascimento, Integer idCredenciamento, Integer idRisco,
+            Integer idMedico) {
+        this.idPaciente = idPaciente;
         this.nome = nome;
+        this.data_nascimento = data_nascimento;
+        this.idCredenciamento = idCredenciamento;
+        this.idRisco = idRisco;
+        this.idMedico = idMedico;
     }
 
     @Override
@@ -72,5 +81,5 @@ public class Pacientes {
 
     public void setIdMedico(Integer idMedico) {
         this.idMedico = idMedico;
-    }
+    }    
 }
