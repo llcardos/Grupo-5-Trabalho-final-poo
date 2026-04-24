@@ -1,7 +1,15 @@
 package br.com.hospital.enums;
 
 public enum TipoAtendimento {
-    CONSULTA, EMERGENCIA, REVISAO;
-}
+    CONSULTA(200.00), EMERGENCIA(500.00), REVISAO(100.00);
 
-// TODO: Atribuir valores específicos a cada tipo de atendimento.
+    private final double custo;
+
+    TipoAtendimento(double custo) {
+        this.custo = custo;
+    }
+
+    public double getCusto() {
+        return custo;
+    }
+}
