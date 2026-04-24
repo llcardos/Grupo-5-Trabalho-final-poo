@@ -1,10 +1,6 @@
 package br.com.hospital.main;
 
-import br.com.hospital.model.Atendimento;
-import br.com.hospital.model.Faturamentos;
-import br.com.hospital.model.Hospital;
-import br.com.hospital.model.Pacientes;
-import br.com.hospital.persistence.FaturaDao;
+import br.com.hospital.model.Exames;
 import br.com.hospital.persistence.NotaFiscalDao;
 
 public class Main {
@@ -38,8 +34,19 @@ public class Main {
             
         // }
 
-        Integer idBuscar = 6;
-        Atendimento atendimento = notaFiscalDao.listarAtendimentoById(idBuscar);
-        System.out.println(atendimento);
+        // Integer idBuscar = 6;
+        // Atendimento atendimento = notaFiscalDao.listarAtendimentoById(idBuscar);
+        // System.out.println(atendimento);
+
+        // for (Exames exame : notaFiscalDao.listareExames()) {
+        //     System.out.println(exame);
+            
+        
+        // }
+        
+        Integer idBuscar = 10;
+        Exames exame = notaFiscalDao.listarExameById(idBuscar);
+        System.out.println(exame);
+        
     }
 }

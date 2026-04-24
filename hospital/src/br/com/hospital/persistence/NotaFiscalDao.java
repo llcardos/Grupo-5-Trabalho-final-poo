@@ -2,10 +2,11 @@ package br.com.hospital.persistence;
 import br.com.hospital.conexao.ConnectionFactory;
 import br.com.hospital.enums.StatusAtendimento;
 import br.com.hospital.enums.TipoAtendimento;
+import br.com.hospital.enums.TipoLaboratorio;
 import br.com.hospital.model.Atendimento;
+import br.com.hospital.model.Exames;
 import br.com.hospital.model.Hospital;
 import br.com.hospital.model.Pacientes;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -144,4 +145,48 @@ public class NotaFiscalDao {
         return null;
     }
 
+    public List<Exames> listareExames(){
+        String sql = "SELECT * FROM EXAMES";
+
+        List<Exames> exames = new ArrayList<>();
+        
+        try {
+            PreparedStatement stmt = connection.prepareStatement(sql);
+            ResultSet result = stmt.executeQuery();
+            while (result.next()) {
+                Exames exame = new Exames(result.getInt("id_exame"), result.getString("nome"), result.getString("tipo"), result.getDouble("custo"), result.getString("descricao"), TipoLaboratorio.valueOf(result.getString("laboratorio")), result.getInt("id_medico"), result.getInt("id_paciente"));
+                exames.add(exame);
+            }
+            result.close();
+            stmt.close();
+            connection.close();
+        
+        } catch (SQLException e) {
+            System.err.println("Problema ao listar os exames");
+            e.printStackTrace();
+        }
+        return exames;
+    }
+    
+    public Exames listarExameById(Integer id){
+        String sql = "select * from exames where id_exame = ?";
+
+        try {
+            PreparedStatement stmt = connection.prepareStatement(sql);
+            stmt.setInt(1, id);
+            ResultSet result = stmt.executeQuery();
+            if (result.next()) {
+                return new Exames(result.getInt("id_exame"), result.getString("nome"), result.getString("tipo"), result.getDouble("custo"), result.getString("descricao"), TipoLaboratorio.valueOf(result.getString("laboratorio")), result.getInt("id_medico"), result.getInt("id_paciente"));
+                
+            }
+            result.close();
+            stmt.close();
+            connection.close();
+
+        } catch (SQLException e) {
+            System.err.println("Problema ao listar exame por ID");
+            e.printStackTrace();
+        }
+        return null;
+    }
 }
