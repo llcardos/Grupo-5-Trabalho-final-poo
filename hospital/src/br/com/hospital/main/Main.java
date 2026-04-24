@@ -1,5 +1,6 @@
 package br.com.hospital.main;
 
+import br.com.hospital.model.Atendimento;
 import br.com.hospital.model.Faturamentos;
 import br.com.hospital.model.Hospital;
 import br.com.hospital.model.Pacientes;
@@ -26,8 +27,19 @@ public class Main {
         //for (Pacientes pacientes : notaFiscalDao.listarPacientes()) {
            // System.out.println(pacientes);
         // }
-        Integer idBuscar = 5;
-        Pacientes pacientes = notaFiscalDao.listarPacientesById(idBuscar);
-        System.out.println(pacientes);
+
+        
+        // Integer idBuscar = 5;
+        // Pacientes pacientes = notaFiscalDao.listarPacientesById(idBuscar);
+        // System.out.println(pacientes);
+
+        // for (Atendimento atendimento : notaFiscalDao.listarAtendimento()) {
+        //     System.out.println(atendimento);
+            
+        // }
+
+        Integer idBuscar = 6;
+        Atendimento atendimento = notaFiscalDao.listarAtendimentoById(idBuscar);
+        System.out.println(atendimento);
     }
 }
