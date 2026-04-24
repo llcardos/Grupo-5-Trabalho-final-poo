@@ -15,7 +15,7 @@ public class Atendimento {
     private Integer id_Enfermeiro;
 
     public Atendimento(Integer id_atendimento, String nome, TipoAtendimento tipo, StatusAtendimento status, 
-     String observacao, LocalDateTime data, Integer id_Paciente, Integer id_Medico, Integer id_Enfermeiro) {
+    String observacao, LocalDateTime data, Integer id_Paciente, Integer id_Medico, Integer id_Enfermeiro) {
         this.id_atendimento = id_atendimento;
         this.nome = nome;
         this.tipo = tipo;

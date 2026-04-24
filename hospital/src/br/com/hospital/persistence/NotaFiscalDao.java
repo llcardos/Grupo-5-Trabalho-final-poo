@@ -1,5 +1,8 @@
 package br.com.hospital.persistence;
 import br.com.hospital.conexao.ConnectionFactory;
+import br.com.hospital.enums.StatusAtendimento;
+import br.com.hospital.enums.TipoAtendimento;
+import br.com.hospital.model.Atendimento;
 import br.com.hospital.model.Hospital;
 import br.com.hospital.model.Pacientes;
 
@@ -7,6 +10,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -94,4 +98,50 @@ public class NotaFiscalDao {
         }
         return null;
     }
+
+    public List<Atendimento> listarAtendimento(){
+        String sql = "Select * from atendimentos";
+
+        List<Atendimento> atendimentos = new ArrayList<>();
+
+        try {
+            PreparedStatement stmt = connection.prepareStatement(sql);
+            ResultSet result = stmt.executeQuery();
+            while (result.next()) {
+                Atendimento atendimento = new Atendimento(result.getInt("id_atendimento"), result.getString("nome"), TipoAtendimento.valueOf(result.getString("tipo")), StatusAtendimento.valueOf(result.getString("status")), result.getString("observacao"), result.getObject("data",LocalDateTime.class), result.getInt("id_paciente"), result.getInt("id_medico"), result.getInt("id_enfermeiro"));
+                atendimentos.add(atendimento);
+            }
+            result.close();
+            stmt.close();
+            connection.close();
+        } catch (SQLException e) {
+            System.err.println("Problema ao listar os atendimentos");
+            e.printStackTrace();
+        }
+        return atendimentos;
+    }
+
+    public Atendimento listarAtendimentoById (Integer id){
+        String sql = "Select * from atendimentos where id_atendimento = ? ";
+        
+        try {
+            PreparedStatement stmt = connection.prepareStatement(sql);
+            stmt.setInt(1, id);
+            ResultSet result = stmt.executeQuery();
+            if (result.next()) {
+                return new Atendimento(result.getInt("id_atendimento"), result.getString("nome"), TipoAtendimento.valueOf(result.getString("tipo")), StatusAtendimento.valueOf(result.getString("status")), result.getString("observacao"), result.getObject("data",LocalDateTime.class), result.getInt("id_paciente"), result.getInt("id_medico"), result.getInt("id_enfermeiro"));
+                                
+            }
+            result.close();
+            stmt.close();
+            connection.close();
+
+
+        } catch (SQLException e) {
+            System.err.println("Problema ao buscar atendimento por Id");
+            e.printStackTrace();
+        }
+        return null;
+    }
+
 }
