@@ -1,26 +1,28 @@
 package br.com.hospital.model;
 
+import br.com.hospital.enums.TipoLaboratorio;
+
 public class Exames {
     private Integer idExame;
     private String nome;
     private String tipo;
     private double custo;
-    private String laboratorio;
     private String descricao;
+    private TipoLaboratorio tipoLaboratorio;
     private Integer idMedico;
     private Integer idPaciente;
     
     public Exames() {
     }
 
-    public Exames(Integer idExame, String nome, String tipo, double custo, String laboratorio, String descricao,
-            Integer idMedico, Integer idPaciente) {
+    public Exames(Integer idExame, String nome, String tipo, double custo, String descricao,
+            TipoLaboratorio tipoLaboratorio, Integer idMedico, Integer idPaciente) {
         this.idExame = idExame;
         this.nome = nome;
         this.tipo = tipo;
         this.custo = custo;
-        this.laboratorio = laboratorio;
         this.descricao = descricao;
+        this.tipoLaboratorio = tipoLaboratorio;
         this.idMedico = idMedico;
         this.idPaciente = idPaciente;
     }
@@ -28,7 +30,7 @@ public class Exames {
     @Override
     public String toString() {
         return "Exames [idExame=" + idExame + ", nome=" + nome + ", tipo=" + tipo + ", custo=" + custo
-                + ", laboratorio=" + laboratorio + ", descricao=" + descricao + ", idMedico=" + idMedico
+                + ", tipoLaboratorio=" + tipoLaboratorio + ", descricao=" + descricao + ", idMedico=" + idMedico
                 + ", idPaciente=" + idPaciente + "]";
     }
 
@@ -64,12 +66,12 @@ public class Exames {
         this.custo = custo;
     }
 
-    public String getLaboratorio() {
-        return laboratorio;
+    public TipoLaboratorio getTipoLaboratorio() {
+        return tipoLaboratorio;
     }
 
-    public void setLaboratorio(String laboratorio) {
-        this.laboratorio = laboratorio;
+    public void setTipoLaboratorio(TipoLaboratorio tipoLaboratorio) {
+        this.tipoLaboratorio = tipoLaboratorio;
     }
 
     public String getDescricao() {
@@ -95,4 +97,6 @@ public class Exames {
     public void setIdPaciente(Integer idPaciente) {
         this.idPaciente = idPaciente;
     }
+
+    
 }

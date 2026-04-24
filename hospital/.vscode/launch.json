@@ -6,6 +6,13 @@
             "name": "Main",
             "request": "launch",
             "mainClass": "br.com.hospital.main.Main",
+            "projectName": "hospital_39751704"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "br.com.hospital.main.Main",
             "projectName": "hospital_7e1cf3ab"
         },
         {
