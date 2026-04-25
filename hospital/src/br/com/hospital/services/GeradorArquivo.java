@@ -13,16 +13,20 @@ public class GeradorArquivo {
     public void gerarArquivo(Integer id, String nomeArquivo){
 
         NotaFiscalDao notaFiscalDao = new NotaFiscalDao();
-        Pacientes pacientes = notaFiscalDao.listarPacientesById(1);
+        Pacientes pacientes = notaFiscalDao.listarPacientesById(id);
+        if (pacientes == null) {
+            System.out.println("Paciente não encontrado. Arquivo não foi gerado.");
+            return;
+        }
         String nomePaciente = pacientes.getNome();
 
         FaturaService fs = new FaturaService();
-        double valorBruto = fs.calculaValorBruto(1);
-        BigDecimal valorIss = fs.calculoImpostoIss(1);
-        BigDecimal valorPis = fs.calculoImpostoPis(1);
-        BigDecimal valorCofins = fs.calculoImpostoCofins(1);
-        BigDecimal valorIrpj = fs.calculoImpostoIrpj(1);
-        BigDecimal valorCsll = fs.calculoImpostoCsll(1);
+        double valorBruto = fs.calculaValorBruto(id);
+        BigDecimal valorIss = fs.calculoImpostoIss(id);
+        BigDecimal valorPis = fs.calculoImpostoPis(id);
+        BigDecimal valorCofins = fs.calculoImpostoCofins(id);
+        BigDecimal valorIrpj = fs.calculoImpostoIrpj(id);
+        BigDecimal valorCsll = fs.calculoImpostoCsll(id);
 
         try (PrintWriter writer = new PrintWriter(new FileWriter(nomeArquivo))) {
 

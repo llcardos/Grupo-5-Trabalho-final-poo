@@ -12,6 +12,10 @@ public class FaturaService {
         FaturaDao faturaDao = new FaturaDao();
         TotalFaturamento totalFaturamento = faturaDao.getTotalFaturamento(idPaciente);
 
+        if (totalFaturamento == null) {
+            throw new IllegalArgumentException("Não foi encontrado faturamento para o paciente informado.");
+        }
+
         return totalFaturamento.getCustoAtendimento() + totalFaturamento.getCustoExame() + totalFaturamento.getCustoInternacao();
     }
 
