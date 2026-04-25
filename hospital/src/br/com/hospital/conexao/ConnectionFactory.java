@@ -24,7 +24,7 @@ public class ConnectionFactory {
         try {
             connection = DriverManager.getConnection(url, user, pw);
             if (connection != null) {
-                System.out.println("Conectado com sucesso!");
+                // System.out.println("Conectado com sucesso!");
                 return connection;
             } else {
                 System.out.println("Não foi possível conectar!");
