@@ -6,6 +6,7 @@ import br.com.hospital.model.Pacientes;
 import br.com.hospital.persistence.NotaFiscalDao;
 import br.com.hospital.services.FaturaService;
 import br.com.hospital.services.GeradorArquivo;
+import br.com.hospital.utils.Saudacao;
 import java.math.BigDecimal;
 import java.util.Scanner;
 
@@ -42,6 +43,9 @@ public class Menu {
 
         String nomeHospital = hospital.getNome();
         String cnpjHospital = hospital.getCnpj();
+
+        Saudacao saudacao = new Saudacao() {};
+        saudacao.exibirSaudacao();
 
         System.out.println("\n=== DADOS DA NOTA FISCAL ===\n");
 
