@@ -34,7 +34,7 @@ public class GeradorArquivo {
             BigDecimal irpj = valorIrpj;
             BigDecimal csll = valorCsll;
 
-            String linha = String.format(Locale.US, "%s;%d;%.2f;%.2f;%.2f;%.2f;%.2f",
+            String linha = String.format(Locale.US, "%s;%.2f;%.2f;%.2f;%.2f;%.2f;%.2f",
                     nome, valorNota, iss, pis, cofins, irpj, csll);
 
             writer.println(linha);
